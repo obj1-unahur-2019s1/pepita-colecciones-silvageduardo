@@ -1,0 +1,18 @@
+import pepita.*
+import comidas.*
+import masAves.*
+import roque.*
+test "roque entrena a pepita , a pepon y a pipa" {
+	roque.agregarPupilo(pepita)
+	roque.agregarPupilo(pepon)
+	roque.agregarPupilo(pipa)
+	roque.entrenar()
+	assert.equals(3 , roque.cuantosPupilosTiene())
+}
+test "pepon puede volar¿"{
+	roque.agregarPupilo(pepita)
+	roque.agregarPupilo(pepon)
+	roque.agregarPupilo(pipa)
+	roque.entrenar()
+	assert.equals( [pipa] , roque.pupilosCapacesDeVolar(100))
+}
